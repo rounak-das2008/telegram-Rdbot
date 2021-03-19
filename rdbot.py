@@ -3,7 +3,7 @@ import random
 import os
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-TOKEN = _TOKEN_
+TOKEN = os.getenv('_TOKEN_')
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
