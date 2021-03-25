@@ -47,9 +47,9 @@ def echo(update, context):
 	"""Echo the user message."""
 	lis4 = ['tor baah er mkc bhai', 'tor baah er maa ke ei chudey ashlam',
 	'hai hai tor baah er pod merediyechi ami', 
-	'tor baah er puro choddo guti ke chudi']
-	for i in ['baah', 'Baah', 'baaaah', 'BaaH']:
-		if i in update.message.text:
+	'tor baah er puro choddo gusti ke chudi bara']
+	for i in ['baah', 'baaah', 'baaaahh', 'bah']:
+		if i in update.message.text.lower():
 			update.message.reply_text(random.choice(lis4))
 			break
 		else:
