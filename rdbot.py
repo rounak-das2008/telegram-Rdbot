@@ -63,8 +63,9 @@ def echo(update, context):
 	
 	for i in ['baah', 'baaah', 'baaaahh', 'bah']:
 		if i in update.message.text.lower():
-			update.message.reply_text(random.choice(lis4))
-			break
+			if user_name != 'Name_Rounak':
+				update.message.reply_text(random.choice(lis4))
+				break
 		else:
 			pass
 	lis5 = ['tor maa ke chudi','khankir chele', 'guud marani','gandur baccha',
