@@ -39,6 +39,9 @@ def md_tmkc(update, context):
     update.message.reply_text (random.choice(lis3))
 def tmkc_everyone(update,context):
     update.message.reply_text('TMKC everyone 😎!')
+def deba_tmkc(update, context):
+    lis6 = ['Dhemnanko bhai, tmkc bhai! 🥱', 'Deba to banchod bara', 'Dhur bara deba banchod', 'Deba khankur chele']
+    update.message.reply_text(random.choice(lis6))
 
 # def ooh_bhai(update, context):
 #       update.sendAudio(audio=open('ooh_bhai.mp3', 'rb'))
@@ -48,6 +51,16 @@ def echo(update, context):
 	lis4 = ['tor baah er mkc bhai', 'tor baah er maa ke ei chudey ashlam',
 	'hai hai tor baah er pod merediyechi ami', 
 	'tor baah er puro choddo gusti ke chudi bara']
+	
+	user_id = update.message.from_user.id
+	
+	if update.message.from_user.username == None:
+		user_name = update.message.from_user.first_name       #first name
+	else:
+		user_name = update.message.from_user.username
+		
+	mention = "["+user_name+"](tg://user?id="+str(user_id)+")"
+	
 	for i in ['baah', 'baaah', 'baaaahh', 'bah']:
 		if i in update.message.text.lower():
 			update.message.reply_text(random.choice(lis4))
@@ -58,10 +71,8 @@ def echo(update, context):
 	'bokachoda', 'tmkc', 'laurar baal']
 	for j in ['rd', 'dhounak' ,'dhemnak', 'ranaghat']:
 		if j in update.message.text or j.upper() in update.message.text or j.capitalize() in update.message.text:
-			user_id = update.message.from_user.id
-			user_name = update.message.from_user.first_name
-			mention = "["+user_name+"](tg://user?id="+str(user_id)+")"
-			if name['username'] != 'Name_Rounak':
+			
+			if user_name != 'Name_Rounak':
 			# try:
 				update.message.reply_text(random.choice(lis5) + ' ' + mention,parse_mode="Markdown")
 
@@ -91,6 +102,8 @@ def main():
     dp.add_handler(CommandHandler("tmkc_everyone", tmkc_everyone))
     # dp.add_handler(CommandHandler("ooh_bhai", ooh_bhai))
     dp.add_handler(CommandHandler("tmkc_md", md_tmkc))
+    dp.add_handler(CommandHandler("tmkc_dhemnanko", deba_tmkc))
+
 
     # on noncommand i.e message - echo the message on Telegram
     dp.add_handler(MessageHandler(Filters.text, echo))
