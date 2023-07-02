@@ -20,6 +20,6 @@ Google Custom Search JSON API Key (Refer to the Google Developers Console for in
 Usage
 To start the bot, run the following command in the project directory:
 ```python
-python bot.py
+python rdbot.py
 ```
 Once the bot is running, find it on Telegram and start a chat with it. You can now use various commands to interact with the bot and access information.
