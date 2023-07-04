@@ -13,9 +13,21 @@ To run this bot, you will need the following:
 
 Python (v3.7 or later)
 python-telegram-bot library (v13.0.0 or later)
+OpenAI API key (Obtain an API key from the OpenAI Developer Portal)
 Wolfram Alpha API Key (Obtain an API key from the Wolfram Alpha Developer Portal)
 Wikipedia API Key (Create an account on the Wikimedia Developer Portal to obtain an API key)
 Google Custom Search JSON API Key (Refer to the Google Developers Console for information on obtaining an API key)
+
+* **Installation**
+Git clone this repository and run
+```python
+pip install -r requirements.txt
+```
+Make an .env file and add 
+OPENAI_API_KEY= {your openai api key}
+BOT_API_KEY= {your bot api key obtained from @BotFather in telegram}
+USER_KEY={your telegram user key obtained from @userinfobot in telegram}
+
 
 Usage
 To start the bot, run the following command in the project directory:
