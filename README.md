@@ -23,15 +23,16 @@ Git clone this repository and run
 ```python
 pip install -r requirements.txt
 ```
-Make an .env file and add 
+Make an .env (given example in .env.example file) file and add 
 OPENAI_API_KEY= {your openai api key}
-BOT_API_KEY= {your bot api key obtained from @BotFather in telegram}
-USER_KEY={your telegram user key obtained from @userinfobot in telegram}
+TELEGRAM_BOT_TOKEN= {your bot api key obtained from @BotFather in telegram}
+ADMIN_USER_IDS={your telegram user key obtained from @userinfobot in telegram}
+ALLOWED_TELEGRAM_USER_IDS={user ids whom you want to give access}
 
 
 Usage
 To start the bot, run the following command in the project directory:
 ```python
-python rdbot.py
+python bot/main.py
 ```
 Once the bot is running, find it on Telegram and start a chat with it. You can now use various commands to interact with the bot and access information.
